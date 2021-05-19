@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>LIST</h1>
+    <div>
+        <a href="{% url 'new' %}"><button>new diary</button></a>
+      </form>
+    </div>
+    <div class="container">
+    <br>
+    {% for blog in blogs %}
+      <div>
+      <li><a href = "{%url 'detail' blog.id %}">{{blog.title}}</a></li>
+      <br>
+      </div>
+    {% endfor %}
+    <a href = "{%url 'first'%}">return to home</a>
+    </div>
+</body>
+</html>

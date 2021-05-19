@@ -1,0 +1,10 @@
+<h1>WRITE YOUR BLOG</h1>
+
+<form action="{%url 'create'%}" method="post">
+    {%csrf_token%}
+    <p>제목: <input type="text" name="title" id=""></p>
+    <p></p>작성자: <input type="text" name="writer" id=""></p>
+    본문: <textarea name="body" id="" cols="30" rows="10"></textarea>
+    <button type="submit">submit</button>
+</form>
+<a href="{% url 'home'%}">back</a>
