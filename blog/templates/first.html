@@ -1,5 +1,17 @@
-<body style="text-align: center;">
-    <h1>YUJIN DIARY</h1>
-    <h2>{{count}} total diaries </h2>
-    <a href="{% url 'home' %}">index</a>
-  </body>
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+ 
+    <h4>{{user.username}}님 안녕하세요!</h4>
+
+    {% endif %} 
+
+<h2>{{count}} total diaries </h2>
+<a href="{% url 'home' %}">목차</a>
+<br>
+<br>
+
+
+
+{% endblock %} 
